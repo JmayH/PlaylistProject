@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Sample of a tester file for the Playlist class. This file should demonstrate all the capability of your
  * playlist in the main method. You don't need to follow the testing specifications of this exactly
@@ -11,6 +12,17 @@ public class PlaylistTester {
         System.out.println("Initializing a Playlist...\n");
         //Make your playlist here
 
+=======
+public class PlaylistTester
+{
+    public static void main(String[] args)
+    {
+         System.out.println("Initializing a Playlist...\n");
+        //Make your playlist here
+        playlist tester = new playlist();
+
+/*
+>>>>>>> main
         System.out.println("Adding songs to the Playlist...\n");
         /**
          * Add some songs here. Note that the format for adding a Song to a Playlist p
@@ -20,7 +32,11 @@ public class PlaylistTester {
 
 
 
+<<<<<<< HEAD
         System.out.println("Printing the songs...\n");
+=======
+  /*      System.out.println("Printing the songs...\n");
+>>>>>>> main
         //Print out all the songs in the playlist to verify it's working correctly
 
 
@@ -48,8 +64,18 @@ public class PlaylistTester {
         System.out.println("\nRemoving all unliked songs from the playlist...\n");
         //This should be doable with a single method call
 
+<<<<<<< HEAD
 
         System.out.println("Printing all songs...\n");
         //This should now look like only the liked songs list from before
     }
 }
+=======
+**/
+        System.out.println("Printing all songs...\n");
+        tester(printSongs());
+        //This should now look like only the liked songs list from before
+    }
+
+}
+>>>>>>> main

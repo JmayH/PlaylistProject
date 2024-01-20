@@ -1,7 +1,12 @@
 /**
  * File for a Song class to be used in the Playlist Project
+<<<<<<< HEAD
  * @author
  * @version
+=======
+ * @author Jamie Hsieh
+ * @version 1/19/24
+>>>>>>> main
  */
 public class Song {
     //Fields-- what information do we want each Song to store?
@@ -9,7 +14,10 @@ public class Song {
     private String name;
     private String artist;
     private String time;
+<<<<<<< HEAD
     private String song;
+=======
+>>>>>>> main
     private boolean liked;
 
 
@@ -22,7 +30,10 @@ public class Song {
         this.name = name;
         this.artist = artist;
         this.time = time;
+<<<<<<< HEAD
         song = "";
+=======
+>>>>>>> main
         liked = false;
     }
     
@@ -48,9 +59,20 @@ public class Song {
       {
         return time;
       }
+<<<<<<< HEAD
       public void toString()
       {
             song = name+"by"+artist+time;
+=======
+      public String toString()
+      {
+         String fullstring= name + "by" + artist + time;
+        if (liked)
+        {
+          fullstring += " -- liked";
+        }
+        return fullstring;
+>>>>>>> main
       }
       public boolean isLiked()
       {
@@ -64,6 +86,18 @@ public class Song {
       {
         liked = false;
       }
+<<<<<<< HEAD
+=======
+      public double getTimeInSeconds()
+      {
+        double seconds = 0;
+        String minutespart = time.substring(0, time.indexOf(":"));
+        seconds += Integer.parseInt(minutespart) * 60;
+        String secondsPart = time.substring(time.indexOf(":") + 1);
+        seconds += Integer.parseInt(secondsPart);
+        return seconds;
+      }
+>>>>>>> main
 
 
 }
