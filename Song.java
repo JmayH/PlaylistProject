@@ -21,10 +21,6 @@ public class Song {
         this.name = name;
         this.artist = artist;
         this.time = time;
-<<<<<<< HEAD
-=======
-
->>>>>>> 9ec39a7 (update)
         liked = false;
     }
     
@@ -50,7 +46,6 @@ public class Song {
       {
         return time;
       }
-<<<<<<< HEAD
       public String toString()
       {
          String fullstring= name + "by" + artist + time;
@@ -60,8 +55,6 @@ public class Song {
         }
         return fullstring;
       }
-=======
->>>>>>> 9ec39a7 (update)
       public boolean isLiked()
       {
         return liked;
