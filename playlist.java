@@ -45,7 +45,6 @@ public class playlist
                 playlist.get(i).toString();
             }
         }
-
     }
 
     public void removeSong(String songname)
@@ -60,6 +59,34 @@ public class playlist
         }
     }
 
+    public void viewLiked()
+    {
+        for (int i = 0; i < playlist.size(); i ++)
+        {
+            if (playlist.get(i).isLiked())
+            {
+                System.out.println(playlist.get(i).toString());
+            }
+        }
+    }
+
+    public void totalDuration()
+    {
+        
+    }
+
+    //only removed song1? needs fixing//
+    public void removeUnliked()
+    {
+        for (int i = 0; i < playlist.size(); i ++)
+        {
+            if (!playlist.get(i).isLiked())
+            {
+                playlist.remove(i);
+            }
+        }
+        
+    }
 
 
 

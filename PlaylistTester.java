@@ -10,10 +10,10 @@ public class PlaylistTester
         System.out.println("Adding songs to the Playlist...\n");
 
         //adding songs
-        tester.addToPlaylist("Song1", "Artist1,", "Duration");
-        tester.addToPlaylist("Song2", "Artist2,", "Duration");
-        tester.addToPlaylist("Song3", "Artist3,", "Duration");
-        tester.addToPlaylist("Song4", "Artist4,", "Duration");
+        tester.addToPlaylist("Song1", "Artist1,", "3:15");
+        tester.addToPlaylist("Song2", "Artist2,", "3:15");
+        tester.addToPlaylist("Song3", "Artist3,", "3:15");
+        tester.addToPlaylist("Song4", "Artist4, ", "3:15");
 
         //Print out all the songs in the playlist to verify it's working correctly
         System.out.println("");
@@ -31,24 +31,21 @@ public class PlaylistTester
         tester.removeSong("Song2");
         tester.printSongs();
 
-        //System.out.println("\nPrinting only the liked songs...\n");
-        //Your Playlist should be able to do this without looping while in main!
+        System.out.println("\nPrinting only the liked songs...\n");
+        //Your Playlist should be able to do this without looping while in main
+        tester.viewLiked();
         
-/*
-
-
-        System.out.println("Printing the songs...\n");
-
-
-        System.out.println("\nPrinting the total duration of all songs...\n");
+        
+        //System.out.println("\nPrinting the total duration of all songs...\n");
         //Note that the format should look something like minutes:seconds
-
+        
 
         System.out.println("\nRemoving all unliked songs from the playlist...\n");
         //This should be doable with a single method call
-
-**/
+        tester.removeUnliked();
+        
         //This should now look like only the liked songs list from before
+        tester.printSongs();
     }
 
 }
