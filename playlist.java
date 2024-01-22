@@ -22,6 +22,9 @@ public class playlist
     public void addToPlaylist(String songname, String artist, String time)
     {
         playlist.add(new Song(songname, artist, time));
+        
+        System.out.println("Added " + songname + " " + artist + time);
+        
         //this chunk isn't working; giving me an error of out of bounds stuff
         // System.out.println("Added " + playlist.get(playlist.size()).toString());
     }
@@ -75,15 +78,19 @@ public class playlist
         
     }
 
-    //only removed song1? needs fixing//
-    public void removeUnliked()
+    // WHY IS IT NOT DELETING SONG3 ARFHFHDHFHFHF //
+    //update: it finally deleted song3 :)//
+    public void removeUnliked(String remove1, String remove2, String remove3)
     {
-        for (int i = 0; i < playlist.size(); i ++)
+        for (int i = playlist.size() - 1; i >= 0 ; i --)
         {
-            if (!playlist.get(i).isLiked())
-            {
+            if (playlist.get(i).getName().equals(remove1) || playlist.get(i).getName().equals(remove2) ||
+            playlist.get(i).getName().equals(remove3))
+            {   
+                System.out.println("Removing - " + playlist.get(i).toString());
                 playlist.remove(i);
             }
+            
         }
         
     }

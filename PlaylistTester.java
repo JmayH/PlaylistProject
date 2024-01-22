@@ -14,6 +14,7 @@ public class PlaylistTester
         tester.addToPlaylist("Song2", "Artist2,", "3:15");
         tester.addToPlaylist("Song3", "Artist3,", "3:15");
         tester.addToPlaylist("Song4", "Artist4, ", "3:15");
+        tester.addToPlaylist("Song5", "Artist5,", "3:15");
 
         //Print out all the songs in the playlist to verify it's working correctly
         System.out.println("");
@@ -42,7 +43,7 @@ public class PlaylistTester
 
         System.out.println("\nRemoving all unliked songs from the playlist...\n");
         //This should be doable with a single method call
-        tester.removeUnliked();
+        tester.removeUnliked("Song1", "Song3", "Song5");
         
         //This should now look like only the liked songs list from before
         tester.printSongs();
