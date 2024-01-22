@@ -23,7 +23,7 @@ public class playlist
     {
         playlist.add(new Song(songname, artist, time));
         
-        System.out.println("Added " + songname + " " + artist + time);
+        System.out.println("Added " + songname + " by " + artist + " " + time);
         
         //this chunk isn't working; giving me an error of out of bounds stuff
         // System.out.println("Added " + playlist.get(playlist.size()).toString());
@@ -75,27 +75,29 @@ public class playlist
 
     public void totalDuration()
     {
-        
+        int time = 0;
+        int min = 0;
+        for (int i = 0; i < playlist.size(); i ++)
+        {
+            time += playlist.get(i).getTimeInSeconds();
+            min = time/60;
+        }
+        System.out.println(min + ":" + (time - min*60));
     }
 
     // WHY IS IT NOT DELETING SONG3 ARFHFHDHFHFHF //
     //update: it finally deleted song3 :)//
-    public void removeUnliked(String remove1, String remove2, String remove3)
+    public void removeUnliked()
     {
         for (int i = playlist.size() - 1; i >= 0 ; i --)
         {
-            if (playlist.get(i).getName().equals(remove1) || playlist.get(i).getName().equals(remove2) ||
-            playlist.get(i).getName().equals(remove3))
+            if (!playlist.get(i).isLiked())
             {   
                 System.out.println("Removing - " + playlist.get(i).toString());
                 playlist.remove(i);
             }
-            
         }
         
     }
-
-
-
 
 }
