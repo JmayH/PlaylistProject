@@ -48,7 +48,7 @@ public class Song {
       }
       public String toString()
       {
-         String fullstring= name + "by" + artist + time;
+         String fullstring= name + " by" + " " + artist + " " + "(" + time + ")";
         if (liked)
         {
           fullstring += " -- liked";
