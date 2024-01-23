@@ -24,7 +24,7 @@ public class PlaylistTester
 
 
 
-       System.out.println("Printing the songs...\n");
+       System.out.println("\n Printing the songs...\n");
         //Print out all the songs in the playlist to verify it's working correctly
         p.printSongs();
         
